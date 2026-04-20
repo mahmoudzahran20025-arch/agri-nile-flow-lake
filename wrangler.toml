@@ -1,0 +1,21 @@
+name               = "agri-nile-flow-lake"
+main               = "src/index.ts"
+compatibility_date = "2025-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory          = "./web/dist"
+not_found_handling = "single-page-application"
+
+[[d1_databases]]
+binding       = "DB"
+database_name = "agri-nile-flow-data-lake"
+database_id   = "2dd5cfe6-b694-46bd-9cb8-adf1bc7c27af"
+
+[vars]
+JWT_SECRET = "REPLACE_WITH_STRONG_SECRET_BEFORE_DEPLOY"
+APP_ENV    = "production"
+
+[dev]
+port           = 8787
+local_protocol = "http"
